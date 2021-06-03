@@ -1,4 +1,6 @@
 const linea=document.querySelector('#lineaUno')
+let Cantidad=document.querySelector('#contador');
+const divBtn=document.querySelector('#div-tres');
 
 //Creamos la classe del juago
 export class Ahorcado{
@@ -27,12 +29,23 @@ export class Ahorcado{
 
         palabraOcultaArr[i]=letra;
        linea.innerText= this.palabraOculta=palabraOcultaArr.join('');
+       this.victoria();
     }
     } 
     }
+    victoria(){
+    const palabraArr= this.palabraOculta.split('');  
+    const palabraEvaluar= palabraArr.join('');  
+
+    if(palabraEvaluar === this.palabra){
+console.log('victoria');
+linea.innerHTML='***Felicidades, Ganaste***'
+        divBtn.innerHTML='';
+    }
+    }
 
     Turnos(Nletra){
-        let Cantidad=document.querySelector('#contador');
+       
 
      
     if(this.palabra.indexOf(Nletra)>=0){
@@ -40,7 +53,6 @@ export class Ahorcado{
         console.log('Existe letra:'+Nletra);
         
     }else{
-        const divBtn=document.querySelector('#div-tres');
         const imagen=document.querySelector('.ahorcado-img');
         this.intetos++;
         Cantidad.innerText=this.intetos;
