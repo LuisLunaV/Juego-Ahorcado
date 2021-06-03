@@ -1,7 +1,7 @@
 const linea=document.querySelector('#lineaUno')
 
 //Creamos la classe del juago
-export class Componentes{
+export class Ahorcado{
    
     constructor(palabra){
         
@@ -16,9 +16,20 @@ export class Componentes{
 
     comprobar(letra){
         
-        console.log('letra');
-    // const palabraOcultaArr = this.palabraOculta.split(' ');
-    // console.log(palabraOcultaArr);
+    let palabraOcultaArr = this.palabraOculta.split(' ');;
+    
+    for(let i=0; i<this.palabra.length; i++){
+     
+    if(this.palabra[i]===letra){
+        console.log(letra);
+        console.log(palabraOcultaArr[i]=letra);
+  
+      
+    }
+    }
+    this.palabraOculta=palabraOcultaArr.join(' ');
+    // linea.innerText=`${this.palabraOculta}`;
+    
     }
     }
     

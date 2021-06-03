@@ -1,24 +1,29 @@
-    import {juego} from '../index';
-    const divTres=document.querySelector('#div-tres');
-    const letras = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-                    'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S',
-                    'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+import { juego } from "..";
 
-  //crear botones
-export const crearBotones=()=>{
-
-       for(let i=0; i<letras.length;i++){
-       let abc=letras[i];
-       const btn=document.createElement('div');
-       //Creamos los elementos buton y el evento onclick.
-       const htmlButon=`<button onclick="juego.comprobar()" class="btn btn-primary" id="btn-${abc}">${abc}</button>`;
-
-       btn.innerHTML=htmlButon;
-       divTres.append(btn.firstElementChild);
-       
-
-       
-    }
-    
-}
-
+export let letr_A=document.querySelector('#btn-A').addEventListener('click',()=>{juego.comprobar('A')}),
+letr_B=document.querySelector('#btn-B').addEventListener('click',()=>{juego.comprobar('B')}),
+letr_C=document.querySelector('#btn-C').addEventListener('click',()=>{juego.comprobar('C')}),
+letr_D=document.querySelector('#btn-D').addEventListener('click',()=>{juego.comprobar('D')}),
+letr_E=document.querySelector('#btn-E').addEventListener('click',()=>{juego.comprobar('E')}),
+letr_F=document.querySelector('#btn-F').addEventListener('click',()=>{juego.comprobar('F')}),
+letr_G=document.querySelector('#btn-G').addEventListener('click',()=>{juego.comprobar('G')}),
+letr_H=document.querySelector('#btn-H').addEventListener('click',()=>{juego.comprobar('H')}),
+letr_I=document.querySelector('#btn-I').addEventListener('click',()=>{juego.comprobar('I')}),
+letr_J=document.querySelector('#btn-J').addEventListener('click',()=>{juego.comprobar('J')}),
+letr_K=document.querySelector('#btn-K').addEventListener('click',()=>{juego.comprobar('K')}),
+letr_L=document.querySelector('#btn-L').addEventListener('click',()=>{juego.comprobar('L')}),
+letr_M=document.querySelector('#btn-M').addEventListener('click',()=>{juego.comprobar('M')}),
+letr_N=document.querySelector('#btn-N').addEventListener('click',()=>{juego.comprobar('N')}),
+letr_Ñ=document.querySelector('#btn-Ñ').addEventListener('click',()=>{juego.comprobar('Ñ')}),
+letr_O=document.querySelector('#btn-O').addEventListener('click',()=>{juego.comprobar('O')}),
+letr_P=document.querySelector('#btn-P').addEventListener('click',()=>{juego.comprobar('P')}),
+letr_Q=document.querySelector('#btn-Q').addEventListener('click',()=>{juego.comprobar('Q')}),
+letr_R=document.querySelector('#btn-R').addEventListener('click',()=>{juego.comprobar('R')}),
+letr_S=document.querySelector('#btn-S').addEventListener('click',()=>{juego.comprobar('S')}),
+letr_T=document.querySelector('#btn-T').addEventListener('click',()=>{juego.comprobar('T')}),
+letr_U=document.querySelector('#btn-U').addEventListener('click',()=>{juego.comprobar('U')}),
+letr_V=document.querySelector('#btn-V').addEventListener('click',()=>{juego.comprobar('V')}),
+letr_W=document.querySelector('#btn-W').addEventListener('click',()=>{juego.comprobar('W')}),
+letr_X=document.querySelector('#btn-X').addEventListener('click',()=>{juego.comprobar('X')}),
+letr_Y=document.querySelector('#btn-Y').addEventListener('click',()=>{juego.comprobar('Y')}),
+letr_Z=document.querySelector('#btn-Z').addEventListener('click',()=>{juego.comprobar('Z')});
