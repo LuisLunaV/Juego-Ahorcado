@@ -7,6 +7,7 @@ export class Ahorcado{
         
     this.palabra=palabra;
     this.palabraOculta='';
+    this.intetos=0;
     }
     
     lineas(){
@@ -15,21 +16,41 @@ export class Ahorcado{
     }
 
     comprobar(letra){
-    
+     //Esta funcion envia la letra al metodo turnos para comparar si fallo o no.
+        this.Turnos(letra);
+    //////////////////////////////////////////////////////////////////////////////
     let palabraOcultaArr = this.palabraOculta.split('');
-    console.log(palabraOcultaArr);
+    
     for(let i=0; i<this.palabra.length; i++){
      
     if(this.palabra[i]===letra){
-        console.log(letra);
-        console.log(palabraOcultaArr[i]=letra);
+
+        palabraOcultaArr[i]=letra;
        linea.innerText= this.palabraOculta=palabraOcultaArr.join('');
-       
+    }
+    } 
+    }
+
+    Turnos(Nletra){
+        let Cantidad=document.querySelector('#contador');
+
+     
+    if(this.palabra.indexOf(Nletra)>=0){
       
-    }
-    }
-    
-    
-    }
-    }
+        console.log('Existe letra:'+Nletra);
+        
+    }else{
+        const divBtn=document.querySelector('#div-tres');
+        const imagen=document.querySelector('.ahorcado-img');
+        this.intetos++;
+        Cantidad.innerText=this.intetos;
+        imagen.src=`./assets/img/${this.intetos}.png`;
+
+        if(this.intetos===9){
+        linea.innerHTML='Losiento, Perdiste'
+        divBtn.innerHTML='';
+        }
+}   
+ }
+  }
     
