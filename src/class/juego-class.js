@@ -15,20 +15,20 @@ export class Ahorcado{
     }
 
     comprobar(letra){
-        
-    let palabraOcultaArr = this.palabraOculta.split(' ');;
     
+    let palabraOcultaArr = this.palabraOculta.split('');
+    console.log(palabraOcultaArr);
     for(let i=0; i<this.palabra.length; i++){
      
     if(this.palabra[i]===letra){
         console.log(letra);
         console.log(palabraOcultaArr[i]=letra);
-  
+       linea.innerText= this.palabraOculta=palabraOcultaArr.join('');
+       
       
     }
     }
-    this.palabraOculta=palabraOcultaArr.join(' ');
-    // linea.innerText=`${this.palabraOculta}`;
+    
     
     }
     }
