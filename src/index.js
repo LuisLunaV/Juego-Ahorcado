@@ -3,7 +3,6 @@
     import './styles.css';
 
 
-    export let juego= new Ahorcado('AGUACATE');
-     //Instancia del metodo que nos ayuda a crear las lineas de las palabras ocultas
+    export let juego= new Ahorcado('SAL');
+    //Instancia del metodo que nos ayuda a crear las lineas de las palabras ocultas
     juego.lineas();
-    // juego.comprobar();
